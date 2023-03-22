@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Number Guess</title>
+  <link rel="stylesheet" href="numberguess.css">
+  <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw=" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1>Welcome to Number Guess</h1>
+    <div>
+        <p>Please Select a number between 1-25</p>
+        <input type="text" id="txtInputNumber" maxlength="2">
+        <input type="button" value="Start Over" id="btnReset">
+        <input type="button" value="Submit" id="btnGuessNumber">
+        <div id="wrongAnswerDiv">
+            <p>Sorry, the answer is : </p> <span id="wrongAnswer"></span>
+        </div>
+        <div id="correctAnswerDiv">
+            <p>You guessed correct! The number is </p> <span id="correctAnswer"></span>
+        </div>
+    </div>
+    <script type="text/javascript" src="numberguess.js"></script>
+</body>
+</html>
