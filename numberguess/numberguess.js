@@ -1,4 +1,6 @@
 $(document).ready(function () {
+  //Disable start over button
+  $('#btnReset').attr("disabled","disabled");
   //variable to hold random number
   let randonNumber = randomInteger(1, 25);
   //hide wrong anser div
@@ -11,6 +13,8 @@ $(document).ready(function () {
   $("#btnGuessNumber").click(function () {
     //Disable button
     this.disabled = true;
+    //Enable start over button
+    $('#btnReset').removeAttr('disabled');
     //Get value entered by user
     let userGuess = $("#txtInputNumber").val();
     //if user input equals random number
