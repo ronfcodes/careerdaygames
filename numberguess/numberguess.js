@@ -2,7 +2,7 @@ $(document).ready(function () {
   //Disable start over button
   $('#btnReset').attr("disabled","disabled");
   //variable to hold random number
-  let randonNumber = randomInteger(1, 25);
+  let randomNumber = randomInteger(1, 25);
   //hide wrong anser div
   $("#wrongAnswerDiv").css("display", "none");
   //hide correct answer div
@@ -11,18 +11,18 @@ $(document).ready(function () {
   var audioElement = document.createElement("audio");
   //event to handle submit button click
   $("#btnGuessNumber").click(function () {
-    //Disable button
+    //Disable button so that you have to start over to submit again
     this.disabled = true;
     //Enable start over button
     $('#btnReset').removeAttr('disabled');
     //Get value entered by user
     let userGuess = $("#txtInputNumber").val();
     //if user input equals random number
-    if (userGuess == randonNumber) {
+    if (userGuess == randomNumber) {
       //unhide correct answer div
       $("#correctAnswerDiv").css("display", "block");
       //write correct answer
-      $("#correctAnswer").text(randonNumber);
+      $("#correctAnswer").text(randomNumber);
       //Play cheers
       audioElement.setAttribute("src", "short-crowd-cheer-6713.mp3");
       audioElement.setAttribute("autoplay", "autoplay");
@@ -37,8 +37,8 @@ $(document).ready(function () {
       //unhide wrong answer div
       $("#wrongAnswerDiv").css("display", "block");
       //display wrong answer div
-      $("#wrongAnswer").text(randonNumber);
-      console.log(randonNumber);
+      $("#wrongAnswer").text(randomNumber);
+      console.log(randomNumber);
       //Play sorry horns
       audioElement.setAttribute("src", "Price-is-right-losing-horn.mp3");
       audioElement.setAttribute("autoplay", "autoplay");
